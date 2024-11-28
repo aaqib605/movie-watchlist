@@ -34,7 +34,6 @@ export function useMovies(query: string) {
         } catch (err) {
           if (err instanceof Error) {
             if (err.name !== "AbortError") {
-              console.log(err.message);
               setError(err.message);
             }
           } else {

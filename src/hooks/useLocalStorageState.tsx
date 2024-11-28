@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
 
-import { Movie } from "../App";
+interface Movie {
+  countRatingDecisions: number;
+  imdbID: string | null;
+  imdbRating: number;
+  poster: string | undefined;
+  runtime: number | "" | undefined;
+  title: string | undefined;
+  userRating: string | number;
+  year: string | undefined;
+}
 
 export function useLocalStorageState(initialState: Movie | [], key: string) {
   const [value, setValue] = useState(function () {
