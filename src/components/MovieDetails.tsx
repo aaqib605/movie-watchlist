@@ -102,11 +102,13 @@ export default function MovieDetails({
             import.meta.env.VITE_OMDB_API_KEY
           }&i=${selectedId}`
         );
+
         const data = await res.json();
 
         setMovie(data);
         setIsLoading(false);
       }
+
       getMovieDetails();
     },
     [selectedId]
@@ -118,7 +120,7 @@ export default function MovieDetails({
       document.title = `Movie | ${title}`;
 
       return function () {
-        document.title = "usePopcorn";
+        document.title = "🍿| usePopcorn";
       };
     },
     [title]
@@ -165,7 +167,7 @@ export default function MovieDetails({
                 </>
               ) : (
                 <p>
-                  You rated with movie {watchedUserRating} <span>⭐️</span>
+                  You rated this movie {watchedUserRating} <span>⭐️</span>
                 </p>
               )}
             </div>
