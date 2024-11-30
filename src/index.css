@@ -138,6 +138,15 @@ body {
   padding: 0.8rem 0;
 }
 
+.search-movie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .list-watched {
   height: calc(100% - 9rem);
 }
@@ -288,6 +297,10 @@ body {
   gap: 2.4rem;
 }
 
+.rating > div {
+  justify-content: center;
+}
+
 .btn-add {
   background-color: var(--color-primary);
   color: var(--color-text);
@@ -386,15 +399,40 @@ body {
   }
 }
 
+@media (max-width: 425px) {
+  .summary div {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 400px) {
   .nav-bar {
     padding: 0 1.5rem;
+  }
+
+  .details section {
+    padding: 4rem 2rem;
+  }
+
+  .search-movie {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 370px) {
   .search {
     width: 20rem;
+  }
+
+  .rating {
+    padding: 2rem 1rem;
+  }
+
+  .details section {
+    padding: 2rem 1rem;
   }
 }
 

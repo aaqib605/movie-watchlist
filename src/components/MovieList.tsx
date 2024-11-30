@@ -26,18 +26,7 @@ export default function MovieList({ movies, onSelectMovie }: MovieListProps) {
             />
           ))
         ) : (
-          <span
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              fontSize: "1.5rem",
-              textAlign: "center",
-            }}
-          >
-            Search movies to see results.
-          </span>
+          <span className="search-movie">Search movies to see results.</span>
         )}
       </ul>
     </>
