@@ -33,8 +33,8 @@ export default function MovieList({ movies, onSelectMovie }: MovieListProps) {
               left: "50%",
               transform: "translateX(-50%)",
               fontSize: "1.5rem",
+              textAlign: "center",
             }}
-            className=""
           >
             Search movies to see results.
           </span>
